@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Board from './Board'
-import { stat } from 'fs'
 
 export class Game extends Component {
   constructor(props) {
@@ -31,11 +30,8 @@ export class Game extends Component {
       const current = history[history.length - 1]
       const squares = current.squares.slice()
       const winner = calculateWinner(squares)
-      if(winner)
-        this.setState({'winner': winner})
-      console.log('Winner: ',this.state.winner)
 
-      if(this.state.winner || winner || squares[i]){
+      if(winner || squares[i]){
         return
       }
 
