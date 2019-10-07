@@ -52,7 +52,7 @@ export class Game extends Component {
     const current = history[this.state.stepNumber]
     const winner = calculateWinner(current.squares)
     const moves = history.map((step,move)=>{
-      const description = move ? 'Go to #' + move : 'start the game'
+      const description = move ? 'Go to #' + move : 'start of the game'
       return (
         <li key={move}>
           <button className="moves" onClick={()=>{this.jumpTo(move)}}>
